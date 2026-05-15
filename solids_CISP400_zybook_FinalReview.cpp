@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <iomanip>
 #include "Solids.h"
 
 using namespace std;
@@ -19,6 +20,7 @@ int main()
     vPtr.push_back(new Sphere(4));
 
     for (Solid* ptr : vPtr) {
+		cout << setprecision(4) << fixed;
         cout << "Solid type: " << ptr->getType() << endl;
 		cout << "Volume: " << ptr->getVolume() << endl;
 		cout << "Surface Area: " << ptr->getSurfaceArea() << endl;

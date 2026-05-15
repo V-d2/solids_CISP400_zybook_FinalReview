@@ -21,7 +21,7 @@ Cuboid::Cuboid(double w, double l, double h) : Solid("Cuboid") {
     height = h;
 }
 double Cuboid::getVolume() {
-    return width * length * height;
+    return width * length * height * 1.0;
 }
  double Cuboid::getSurfaceArea()  {
     return (width * length + width * height + height * length) * 2;
