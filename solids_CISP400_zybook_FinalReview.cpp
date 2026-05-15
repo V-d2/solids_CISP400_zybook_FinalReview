@@ -1,20 +1,28 @@
-// solids_CISP400_zybook_FinalReview.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include <vector>
+#include "Solids.h"
+
+using namespace std;
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	//Solid* CuboidPtr = new Cuboid(2, 2, 2);
+    //Solid* CuboidPtr2 = new Cuboid(3, 4, 5);
+    //Solid* CylinderRtr = new Cylinder(3, 2);
+    //Solid* SpherePtr = new Sphere(4);
+
+    vector<Solid*> vPtr;
+    vPtr.push_back(new Cuboid(2, 2, 2));
+    vPtr.push_back(new Cuboid(3, 4, 5));
+    vPtr.push_back(new Cylinder(3, 2));
+    vPtr.push_back(new Sphere(4));
+
+    for (Solid* ptr : vPtr) {
+        cout << "Solid type: " << ptr->getType() << endl;
+		cout << "Volume: " << ptr->getVolume() << endl;
+		cout << "Surface Area: " << ptr->getSurfaceArea() << endl;
+		cout << endl;
+    }
+
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
