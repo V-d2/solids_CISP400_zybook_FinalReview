@@ -1,5 +1,5 @@
-#ifndef SOLID
-#define SOLID
+#ifndef SOLIDS
+#define SOLIDS
 #include <iostream>
 
 
@@ -29,10 +29,10 @@ public:
 		length = l;
 		height = h;
     }
-    double getVolume() override {
+    virtual double getVolume() override{
         return width * length * height;
     }
-    double getSurfaceArea() {
+    virtual double getSurfaceArea() override{
 		return (width * length + width * height + height * length ) * 2;
     }
 private:
@@ -47,12 +47,34 @@ public:
         height = h;
         radius = r;
     }
+    virtual double getVolume() override{
+        return PI * radius * radius * height;
+    }
+
+    virtual double getSurfaceArea() override{
+        return 2 * PI * radius * radius + 2 * PI * radius * height;
+    }
 private:
     double height;
     double radius;
 	const double PI;
 };
 
+class Sphere : public Solid {
+public:
+    Sphere(double r) : Solid("Sphere"), PI(3.14159265359) {
+        radius = r;
+    }
+    virtual double getVolume() override {
+        return 4.0 / 3.0 * PI * radius * radius * radius;
+    }
+    virtual double getSurfaceArea() override {
+		return 4 * PI * radius * radius;
+    }
+private:
+	double radius;
+    double PI;
+};
 
 
 
