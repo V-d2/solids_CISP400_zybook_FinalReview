@@ -18,6 +18,9 @@
     <ClCompile Include="solids_CISP400_zybook_FinalReview.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Solids.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solids.h">

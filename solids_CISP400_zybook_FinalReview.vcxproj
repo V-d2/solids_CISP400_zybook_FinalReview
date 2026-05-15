@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Solids.cpp" />
     <ClCompile Include="solids_CISP400_zybook_FinalReview.cpp" />
   </ItemGroup>
   <ItemGroup>
